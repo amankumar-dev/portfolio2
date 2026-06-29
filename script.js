@@ -13,15 +13,13 @@ const libBtn=document.querySelector('.library-btn');
 const toolBtn=document.querySelector('.tools-btn');
 const ugBtn=document.querySelector('.ug-btn');
 
-const allSkills=['C','C++','Java','JavaScript','HTML','CSS','Visual Basics','SQL','TCP/IP','OSI','ReactJS','Bootstrap','Tailwind','Redux-Toolkit','Zustand','Github','VisualCode','Postman','MySQL','Canva','DSA','Computer Graphics','Digital Electronics','Discrete Mathematics','Operating System','Software Engineering'];
+const allSkills = ['Python','SQL','PostgreSQL','Pandas','NumPy','PySpark','Apache Airflow','AWS','Databricks','Git','GitHub','Docker','Linux','VS Code','Postman','Data Warehousing','ETL Pipelines','Data Modeling','Star Schema','Dimensional Modeling','Medallion Architecture'];
 
-const techSkills=['C','C++','Java','JavaScript','HTML','CSS','Visual Basics','SQL','TCP/IP','OSI'];
+const techSkills = ['Python','SQL','PostgreSQL','Pandas','NumPy','PySpark'];
 
-const libSkills=['ReactJS','Bootstrap','Tailwind','Redux-Toolkit','Zustand'];
+const libSkills = ['Apache Airflow','AWS','Databricks','Data Warehousing','ETL Pipelines','Data Modeling','Star Schema','Dimensional Modeling','Medallion Architecture'];
 
-const toolSkills=['Github','VisualCode','Postman','MySQL','Canva'];
-
-const ugSkills=['DSA','Computer Graphics','Digital Electronics','Discrete Mathematics','Operating System','Software Engineering'];
+const toolSkills = ['Git','GitHub','Docker','Linux','VS Code','Postman'];
 
 function updateSkills(skillsArray) {
     skillsHolder.innerHTML = '';
@@ -65,16 +63,6 @@ toolBtn.addEventListener('click', () => {
     ugBtn.classList.remove('activee-skills');
     updateSkills(toolSkills);
 });
-
-ugBtn.addEventListener('click', () => {
-    techBtn.classList.remove('activee-skills');
-    libBtn.classList.remove('activee-skills');
-    toolBtn.classList.remove('activee-skills');
-    allBtn.classList.remove('activee-skills');
-    ugBtn.classList.add('activee-skills');
-    updateSkills(ugSkills);
-});
-
 
 updateSkills(allSkills); 
 
